@@ -1,0 +1,343 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[hide links]{hyperref}
+\title{\huge{\textbf{Assignment Report}}}
+\author{\large{\textbf{ELP-718 Telecom Software Lab}}}
+\date{}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{tocbibind}
+\pagenumbering{gobble}
+\begin{document}
+\pagenumbering{roman}
+\maketitle
+{\centering
+\textcolor{black}{\rule{\textwidth}{3pt}}   %to introduce a red coloured bar
+
+
+\bigskip
+\bigskip
+
+\large{\textbf{\emph{SEMESTER:- I}}}\\
+\bigskip
+\large{\textbf{\emph{YEAR:- M.Tech (2016-2017)}}\\
+\bigskip
+\includegraphics[scale=.4]{33.png}
+\bigskip
+
+Submitted by\\
+\bigskip
+\large{\textbf{\emph{Name:-\underline{ PRAKHAR ARYA}}}}\\
+\bigskip
+\large{\textbf{\emph{Entry Number:- \underline{JTM162080}}}}\\
+\bigskip
+\bigskip
+
+\large{\textbf{Programming Assignment no.:- 4}\\
+\large{\textbf{Due Date:- \today}}
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+
+\flushleft
+
+
+\newpage
+\pagenumbering{arabic}
+\newpage
+\begin{center}
+\section{
+Introduction}
+\flushleft
+\textbf{Python} is a general-purpose interpreted, interactive, object-oriented, and high-level
+programming language.\\ It was created by Guido van Rossum during 1985- 1990.
+Like Perl, Python source code is also available under the GNU General Public License(GPL).\\
+\vspace{10mm}
+\textbf{ Some key points :}
+\begin{itemize}
+\item Easy-to-learn: Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.
+\item Easy-to-read: Python code is more clearly defined and visible to the eyes.
+\item Easy-to-maintain: Python's source code is fairly easy-to-maintain.
+\item Databases: Python provides interfaces to all major commercial databases.
+\item Portable: Python can run on a wide variety of hardware platforms and has the
+same interface on all platforms.
+\end{itemize}
+\end{center}
+\newpage
+\begin{center}
+\section{
+Problem Statement }
+\end{center}
+\begin{enumerate}
+
+
+ \item\textbf{\large{Problem statement 1:}}
+ 
+Write a Python program that can take a big string (with spaces) as input from the command line and count number of times a word occurs in the string and also print the top 3 words in terms of their frequency of count.\\
+Also print the next permutation of each word appearing in the string.
+
+
+
+\bigskip
+
+
+\item\textbf{\large{Problem statement 2:}}
+In Telecommunication Systems a Call Data Record(CDR) is generated corresponding to every call/sms or for every activity made by the user and stored in the database. Usually the CDR is stored in the format of ASN.1 and contains various Attributes related to the call.\\ 
+\bigskip
+
+\textbf{Part 1}: Generate different files corresponding to each plan opted using awk.\\
+\bigskip
+\textbf{Part 2}: For each of the file obtain above calculate the average call duration for each type of call.
+\\
+\bigskip
+\textbf{Part 3}:
+For each Plan calculate the total amount the customer has to pay. Use the table given for rates.\\
+
+\item\textbf{{\large{Problem statement 3:}}}
+
+You have to design an addressing code for a shipping company that works all around India. The address given by the customer is split into fields of \\
+Name, House No/ colony/landmark\\
+City\\
+District\\
+State/Union territory
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+\centering
+
+
+
+\newpage
+\centering
+\newpage
+\section{Assumptions}
+ 
+\begin{itemize}
+\item{For \textbf{Problem 1} assume that the string is given through rawinput.}
+\item{For \textbf{Problem 2} the range to create random numbers is taken as (1,101).}
+\item{For \textbf{Problem 3} we have designed our oen database.}
+\end{itemize}
+
+\newpage
+
+\flushleft
+\begin{center}
+
+
+\section{Implementation}
+\end{center}
+\subsection{Problem 1}
+\begin{itemize}
+\item{Sub program Name:}
+\textbf{Write a Python program that can take a big string (with spaces) as input from the command line and count number of times a word occurs in the string and also print the top 3 words in terms of their frequency of count.\\
+Also print the next permutation of each word appearing in the string.}
+
+
+\item{Input format}
+\textbf{ input through command line " My name is is the "
+}
+
+
+\item{Ouput format}\\
+is 2\\
+the 1\\
+My 1\\
+si\\ eht\\ym\\
+
+
+
+
+
+\item{\textbf{Algorithm}}
+\begin{itemize}
+\item First enter the string through rawinput
+\item Split the sting through str.split()
+\item use Sorted function(item,key) to sort the words in order of their frequency.
+\item use perms(0 function to print the permutations
+
+
+\end{itemize}
+
+
+\end{itemize}
+\newpage
+
+\subsection{Problem 2}
+\begin{itemize}
+
+
+\item{Sub program Name:}\\
+\textbf{ calculate number of points that lie inside unit radius circle in terms of percentage.
+}
+
+\bigskip
+
+\bigskip
+ 
+ 
+
+\item{\textbf{Ouput}}\\
+Percentage of users in the unit circle around the MSC is 80.0
+
+
+
+
+
+\item{Algorithm}
+\begin{itemize}
+\item{ Use random.random(0 function to create random no lying between 0 and 1 as (X,Y)}
+\item{ Now calculate trhe distance of (X,Y) from the origin}
+\item{ Points whoze distance lie within 1 from the origin are incremented in the count}
+\item{ Next print Count} 
+
+\end{itemize}
+\end{itemize}
+\newpage
+\subsection{Problem 3}
+\begin{itemize}
+
+
+\item{Sub program Name:}\\
+\textbf{1.Create a database with some default addresses.\\
+2.The database should be editable(Add, delete, modify).\\
+3.Also notify any discrepancy in data to the employee if the address is invalid or do not exist in the database.\\
+}
+
+\bigskip
+
+\bigskip
+ 
+\item{\textbf{Input}}\\
+1.enter customer name Prakhar
+1.enter customer district IIT ROORKEE
+1.enter customer city ROORKEE
+1.enter customer state UTTARAKHAND
+  
+
+\item{\textbf{Ouput}}\\
+Human Readable code\\
+CC.NO= 000 000 111
+
+
+
+
+
+\item{\textbf{Algorithm}}
+\begin{itemize}
+\item{ Design our own database using dictionary}
+\item{map each keyword to a code in dictionary}
+\item{ Design a module in which\\
+1.add\\
+2.modify\\
+3.delete\\
+4.querry\\}
+\item{ use function get() and update() to get code corresponding to each key and to update the dictionary  }
+\item{ use join(seq) in order to join all codes and print as CC NO="code"} 
+
+\end{itemize}
+\end{itemize}
+\centering
+
+\newpage
+\section{Test Description and Results}
+\begin{itemize}
+\item The results obtained can be seen from the screenshots taken.
+
+\end{itemize} 
+
+\newpage
+\section{Screenshots}
+\flushleft
+
+\subsection{Screenshot of output of ps1}
+
+
+\begin{figure}[h]
+\includegraphics[scale=.8]{32.png}
+\caption{Screenshot of problem statement 1}
+\end{figure}
+
+
+\begin{flushleft}
+
+
+\newpage
+
+\subsection{Screenshot of output of ps2}
+\end{flushleft}
+\begin{figure}[h]
+\includegraphics[scale=.6]{31.png}
+\caption{Screenshot of problem statement 2}
+
+\end{figure}
+\begin{flushleft}
+
+
+\subsection{Screenshot of output of ps3}
+\end{flushleft}
+\begin{figure}[h]
+\includegraphics[scale=.6]{41.png}
+\caption{Screenshot of problem statement 3}
+
+\end{figure}
+
+
+
+
+\centering
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{latex}
+latex\\
+ \texttt{\url{{https://www.sharelatex.com}}}
+ 
+
+
+ 
+ 
+
+\bibitem{knuthwebsite}
+Python Programming
+\\\texttt{\url{http://www.tutorialspoint.com}}
+
+\bibitem{knuthwebsite}
+Python Programming
+\\\texttt{\url{http://www.python.org}}
+
+\bibitem{knuthwebsite}Programming
+\\\texttt{\url{http://www..com}}
+ 
+ 
+\end{thebibliography}
+
+\newpage
+\section{Epilogue}
+\begin{enumerate}
+\item Use of sorted function makes the process easier
+
+\item random.random() helps in the generation of random numbers.
+\item use of state.get() and state.update is very useful
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
